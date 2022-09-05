@@ -6,7 +6,7 @@ const Home = () => {
   const navigate = useNavigate();
   return (
     <div className="home">
-      <h1 className="home_title">Youtube App</h1>
+      <h1 className="home_title">YouTube App</h1>
       <Button
         type="primary"
         className="input_button"
