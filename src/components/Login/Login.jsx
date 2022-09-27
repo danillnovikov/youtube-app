@@ -18,7 +18,7 @@ const Login = () => {
         } else {
           // 'Ваш токен:', response.data.token;
           localStorage.setItem('token', response.data.token);
-          navigate('/success');
+          navigate('/main');
         }
       });
   };
