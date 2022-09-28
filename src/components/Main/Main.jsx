@@ -15,9 +15,9 @@ const Main = () => {
         `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${text}&type=video&order=date&maxResults=5&key=AIzaSyCbTsQhecq1pp2hNFC7d2_qTyj_Ja71hiU`
       )
       .then((data) => setData(data.data.items));
-  }, []);
+  }, [text]);
 
-  function req() {
+  function request() {
     console.log(data);
   }
 
@@ -47,13 +47,23 @@ const Main = () => {
             onChange={(event) => setText(event.target.value)}
             value={text}
           />
-          <Button onClick={() => req()} type="primary" danger>
+          <Button onClick={() => request()} type="primary" danger>
             Найти
           </Button>
         </div>
       </main>
 
-      <div>{data.data}</div>
+      <div>
+        {data.map((items) => (
+          <div key={items.id.videoId}>
+            <img
+              src={`https://i.ytimg.com/vi/${items.id.videoId}/hqdefault.jpg`}
+              alt="logo"
+            />
+            {items.snippet.title}{' '}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
