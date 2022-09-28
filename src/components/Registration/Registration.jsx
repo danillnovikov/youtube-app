@@ -55,7 +55,11 @@ const Registration = () => {
           <Input.Password id="password" placeholder="password"></Input.Password>
         </Form.Item>
         <Form.Item>
-          <Button className="btn" type="primary" htmlType="submit">
+          <Button
+            className="input_button registration"
+            danger
+            htmlType="submit"
+          >
             Registration
           </Button>
         </Form.Item>
@@ -65,3 +69,12 @@ const Registration = () => {
 };
 
 export default Registration;
+
+//daniil@mail.ru
+//1234dfghDf!
+
+//sfdsgsd@gmail.com
+//12312!Dst
+
+//fdsgfsd@mail.ru
+//12312!Dst

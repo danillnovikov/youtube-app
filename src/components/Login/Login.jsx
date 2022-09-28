@@ -56,7 +56,10 @@ const Login = () => {
           <Input.Password id="password" placeholder="password"></Input.Password>
         </Form.Item>
         <Form.Item>
-          <Button className="btn" type="primary" htmlType="submit">
+          {/* <Button className="btn" type="primary" htmlType="submit">
+            Войти
+          </Button> */}
+          <Button danger className="input_button input" htmlType="submit">
             Войти
           </Button>
         </Form.Item>
